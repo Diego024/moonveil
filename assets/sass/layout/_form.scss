@@ -1,0 +1,81 @@
+@use "./../utilities/theme" as t;
+@use "./../utilities/mixins" as m;
+
+#contact-us {
+  min-height: 92vh;
+  background: url("./../../assets/images/main-pattern.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: t.$text-color;
+
+  h3 {
+    @include m.title-style(2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    width: 78vw;
+    background: #182634a2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-family: t.$text-font;
+        font-weight: lighter;
+        font-size: 1.25rem;
+        align-self: start;
+        margin-bottom: 0.5rem;
+      }
+      input,
+      textarea {
+        font-family: t.$text-font;
+        font-weight: lighter;
+        text-align: left;
+        background: t.$light-backdrop-color;
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        outline: none;
+        color: t.$text-color;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: t.$light-backdrop-color;
+      }
+
+      input:focus,
+      textarea:focus {
+        background: t.$text-color;
+        color: t.$primary-color-dark;
+      }
+    }
+    button {
+      padding: 0.8rem 0;
+      background: t.$light-backdrop-color;
+      color: t.$text-color;
+      border: none;
+      border-radius: 0.4rem;
+    }
+  }
+}
+footer {
+  min-height: 8vh;
+  display: grid;
+  place-items: center;
+  background: t.$primary-color-dark;
+  h2 {
+    color: t.$text-color;
+    font-family: t.$text-font;
+    font-weight: lighter;
+    font-size: 1.25rem;
+  }
+}

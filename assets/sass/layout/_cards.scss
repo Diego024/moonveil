@@ -1,0 +1,71 @@
+@use "./../utilities/theme" as t;
+@use "./../utilities/mixins" as m;
+
+#what-can-you-see {
+  background: url("./../../assets/images/main-pattern.png");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    @include m.title-style(2rem);
+    color: t.$text-color;
+  }
+}
+
+.cards-container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+
+  article {
+    background: #000;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 1rem;
+    flex: 1.5 0 20rem;
+    transition: background 1s;
+
+    @include m.minDesktop {
+      flex: 1.5 0 22rem;
+    }
+    figure {
+      width: 5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 1s;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:hover {
+      background: t.$text-color;
+      color: t.$primary-color-dark;
+      figure {
+        width: 2rem;
+        top: 2rem;
+        left: 2rem;
+      }
+    }
+  }
+}
+
+.info {
+  h4 {
+    @include m.title-style(1.25rem);
+    margin: 0.25rem 0;
+  }
+  p {
+    text-align: justify;
+  }
+}

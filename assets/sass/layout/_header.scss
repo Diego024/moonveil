@@ -1,0 +1,122 @@
+@use "./../utilities/theme" as t;
+@use "./../utilities/mixins" as m;
+
+header {
+  min-height: 100vh;
+  background: url("./../../assets/images/bg-pattern.png");
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 1rem;
+  color: t.$text-color;
+}
+
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-family: t.$logo-font;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    font-family: t.$item-font;
+
+    @include m.maxTablet {
+      gap: 2rem;
+    }
+
+    li {
+      a {
+        color: t.$text-color;
+      }
+      &:nth-child(1) {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include m.maxMobile {
+    ul {
+      display: none;
+    }
+  }
+}
+
+.highlight {
+  a {
+    padding: 0.75rem 1rem;
+    background: t.$light-backdrop-color;
+    border-radius: 0.5rem;
+  }
+
+  &:hover {
+    a {
+      background: t.$text-color;
+      color: t.$primary-color;
+    }
+  }
+}
+
+.hamburguer {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 4px;
+  div {
+    width: 1.2rem;
+    height: 2px;
+    background: t.$text-color;
+  }
+  @include m.minMobile {
+    & {
+      display: none;
+    }
+  }
+}
+
+header section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: t.$title-font;
+  text-align: center;
+}
+
+.abstract {
+  h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    max-width: 18rem;
+  }
+}
+
+.btn-container {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+
+  button {
+    padding: 0.8rem 2.6rem;
+    background: t.$light-backdrop-color;
+    color: t.$text-color;
+    border: none;
+    border-radius: 0.4rem;
+
+    &:hover {
+      cursor: pointer;
+      background: t.$text-color;
+      color: t.$primary-color;
+    }
+  }
+}

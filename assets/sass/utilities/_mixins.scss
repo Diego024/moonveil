@@ -1,0 +1,39 @@
+@use "../utilities/variables" as v;
+@use "../utilities/theme" as t;
+
+@mixin title-style($font-size: 1em) {
+  font-family: t.$title-font;
+  font-weight: 400;
+  font-size: $font-size;
+  text-align: center;
+}
+
+@mixin minMobile {
+  @media (min-width: v.$device-phone) {
+    @content;
+  }
+}
+
+@mixin maxMobile {
+  @media (max-width: v.$device-phone) {
+    @content;
+  }
+}
+
+@mixin minTablet {
+  @media (min-width: v.$device-tablet) {
+    @content;
+  }
+}
+
+@mixin maxTablet {
+  @media (max-width: v.$device-tablet) {
+    @content;
+  }
+}
+
+@mixin minDesktop {
+  @media (min-width: v.$device-laptop) {
+    @content;
+  }
+}

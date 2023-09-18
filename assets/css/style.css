@@ -1,0 +1,357 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  min-height: 100vh;
+  background: url("./../../assets/images/bg-pattern.png");
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 1rem;
+  color: #E5E5E5;
+}
+
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-bar h1 {
+  font-family: "Caveat", monoscape;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.main-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 768px) {
+  .main-bar ul {
+    gap: 2rem;
+  }
+}
+.main-bar ul li a {
+  color: #E5E5E5;
+}
+.main-bar ul li:nth-child(1) {
+  text-decoration: underline;
+}
+@media (max-width: 650px) {
+  .main-bar ul {
+    display: none;
+  }
+}
+
+.highlight a {
+  padding: 0.75rem 1rem;
+  background: rgba(229, 229, 229, 0.3333333333);
+  border-radius: 0.5rem;
+}
+.highlight:hover a {
+  background: #E5E5E5;
+  color: #23374D;
+}
+
+.hamburguer {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 4px;
+}
+.hamburguer div {
+  width: 1.2rem;
+  height: 2px;
+  background: #E5E5E5;
+}
+@media (min-width: 650px) {
+  .hamburguer {
+    display: none;
+  }
+}
+
+header section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+}
+
+.abstract h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.abstract h3 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  max-width: 18rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.btn-container button {
+  padding: 0.8rem 2.6rem;
+  background: rgba(229, 229, 229, 0.3333333333);
+  color: #E5E5E5;
+  border: none;
+  border-radius: 0.4rem;
+}
+.btn-container button:hover {
+  cursor: pointer;
+  background: #E5E5E5;
+  color: #23374D;
+}
+
+#contact-us {
+  min-height: 92vh;
+  background: url("./../../assets/images/main-pattern.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #E5E5E5;
+}
+#contact-us h3 {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#contact-us form {
+  width: 78vw;
+  background: rgba(24, 38, 52, 0.6352941176);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+#contact-us form div {
+  display: flex;
+  flex-direction: column;
+}
+#contact-us form div label {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 1.25rem;
+  align-self: start;
+  margin-bottom: 0.5rem;
+}
+#contact-us form div input,
+#contact-us form div textarea {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  background: rgba(229, 229, 229, 0.3333333333);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  outline: none;
+  color: #E5E5E5;
+}
+#contact-us form div input::placeholder,
+#contact-us form div textarea::placeholder {
+  color: rgba(229, 229, 229, 0.3333333333);
+}
+#contact-us form div input:focus,
+#contact-us form div textarea:focus {
+  background: #E5E5E5;
+  color: #182634;
+}
+#contact-us form button {
+  padding: 0.8rem 0;
+  background: rgba(229, 229, 229, 0.3333333333);
+  color: #E5E5E5;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+footer {
+  min-height: 8vh;
+  display: grid;
+  place-items: center;
+  background: #182634;
+}
+footer h2 {
+  color: #E5E5E5;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-size: 1.25rem;
+}
+
+#what-can-you-see {
+  background: url("./../../assets/images/main-pattern.png");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#what-can-you-see h3 {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #E5E5E5;
+}
+
+.cards-container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+.cards-container article {
+  background: #000;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 1rem;
+  flex: 1.5 0 20rem;
+  transition: background 1s;
+}
+@media (min-width: 1024px) {
+  .cards-container article {
+    flex: 1.5 0 22rem;
+  }
+}
+.cards-container article figure {
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+.cards-container article figure img {
+  width: 100%;
+  object-fit: cover;
+}
+.cards-container article:hover {
+  background: #E5E5E5;
+  color: #182634;
+}
+.cards-container article:hover figure {
+  width: 2rem;
+  top: 2rem;
+  left: 2rem;
+}
+
+.info h4 {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0.25rem 0;
+}
+.info p {
+  text-align: justify;
+}
+
+#photos-showcase {
+  background: url("../../assets/images/main-pattern-dark.png");
+}
+#photos-showcase h3 {
+  display: grid;
+  place-items: center;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #E5E5E5;
+  height: 12vh;
+}
+
+.photo-set {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+@media (min-width: 768px) {
+  .photo-set {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 10rem);
+  }
+}
+@media (min-width: 1024px) {
+  .photo-set {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 15rem);
+  }
+}
+.photo-set figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-set figure span {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

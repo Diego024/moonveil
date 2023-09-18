@@ -1,0 +1,40 @@
+@use "./../utilities/theme" as t;
+@use "./../utilities/mixins" as m;
+
+#photos-showcase {
+  background: url("../../assets/images/main-pattern-dark.png");
+
+  h3 {
+    display: grid;
+    place-items: center;
+    @include m.title-style(2rem);
+    color: t.$text-color;
+    height: 12vh;
+  }
+}
+
+.photo-set {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  @include m.minTablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, max(10rem));
+  }
+  @include m.minDesktop {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, max(15rem));
+  }
+  figure {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    span {
+      display: none;
+    }
+  }
+}
