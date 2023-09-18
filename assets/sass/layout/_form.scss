@@ -65,6 +65,10 @@
       border: none;
       border-radius: 0.4rem;
     }
+
+    @include m.minDesktop {
+      width: 50vw;
+    }
   }
 }
 footer {

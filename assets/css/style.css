@@ -228,6 +228,11 @@ header section {
   border: none;
   border-radius: 0.4rem;
 }
+@media (min-width: 1024px) {
+  #contact-us form {
+    width: 50vw;
+  }
+}
 
 footer {
   min-height: 8vh;
