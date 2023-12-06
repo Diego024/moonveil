@@ -358,5 +358,20 @@ footer h2 {
 .photo-set figure span {
   display: none;
 }
+.photo-set figure:hover {
+  height: 85%;
+  position: absolute;
+  inset: 0;
+}
+.photo-set figure:hover span {
+  display: block;
+  height: 15%;
+  background: #E5E5E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #23374D;
+  font-family: "Space Mono", monoscape;
+}
 
 /*# sourceMappingURL=style.css.map */

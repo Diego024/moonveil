@@ -27,6 +27,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, max(15rem));
   }
+
   figure {
     img {
       width: 100%;
@@ -35,6 +36,23 @@
     }
     span {
       display: none;
+    }
+
+    &:hover {
+      height: 85%;
+      position: absolute;
+      inset: 0;
+
+      span {
+        display: block;
+        height: 15%;
+        background: t.$text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: t.$primary-color;
+        font-family: t.$mono-font;
+      }
     }
   }
 }
